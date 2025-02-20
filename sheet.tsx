@@ -7,7 +7,10 @@ import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const Sheet = SheetPrimitive.Root
+const Sheet = ({ shouldScaleBackground = true, ...props }) => (
+  <SheetPrimitive.Root shouldScaleBackground={shouldScaleBackground} {...props} />
+)
+Sheet.displayName = "Sheet"
 
 const SheetTrigger = SheetPrimitive.Trigger
 

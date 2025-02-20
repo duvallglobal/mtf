@@ -23,11 +23,7 @@ export function ClientAuthProvider({
 }: {
   children: React.ReactNode
 }) {
-  const [client, setClient] = useState<Client>({
-    id: 1,
-    name: "Sarah Thompson",
-    email: "sarah.t@example.com",
-  })
+  const [client, setClient] = useState<Client | null>(null)
 
   const login = async (email: string, password: string) => {
     // In a real app, this would make an API call to authenticate
